@@ -4,7 +4,7 @@ import React from "react";
 export const Nav = (()=>{
     return (
     
-        <nav className=" w-[20%] flex flex-col px-4 item-center h-screen bg-zinc-300 ">
+        <nav className=" w-[20%] flex flex-col px-4 fixed item-center h-screen bg-zinc-300 ">
           <a
             className="m-2 p-2  h-fit mt-5 bg-white text-center text-red-300 font-medium border-[1px] border-red-300"
             href="#"

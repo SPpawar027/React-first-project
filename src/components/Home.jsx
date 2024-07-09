@@ -11,14 +11,14 @@ export const Home = () => {
   return (
     products ? 
     <>
-      <div className="flex overflow-x-hidden ">
-        <Nav /> 
-        <div className="w-[80%] pt-10 pl-4 h-screen  flex flex-wrap">
+      <div >
+        <Nav  /> 
+        <div className="w-[80%] pt-10 pl-4 h-screen ml-[20%] overflow-y-scroll flex flex-wrap">
           {products.map((p , i)=>{
           return(
           <Link key={i}
             to={`/Details/${p.id}`}
-            className="w-60 h-60  shadow shadow-black-400  cursor-pointer flex flex-col items-center  justify-center  bg-white mt-5 ml-2"
+            className="w-[230px] h-[220px]  shadow shadow-black-400  cursor-pointer flex flex-col items-center  justify-center  bg-white mt-5 ml-2"
           >
             <div
               className=" w-40 h-40 bg-contain bg-no-repeat hover:scale-110 duration-500 object-cover ml-10 mb-3   "

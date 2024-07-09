@@ -5,7 +5,7 @@ import { Details } from './components/Details';
 
 function App() {
   return (
-    <div className="w-screen h-screen  ">
+    <div className="w-screen h-screen ">
 
 
       <Routes>
