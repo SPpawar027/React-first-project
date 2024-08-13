@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Details } from './components/Details';
+import Create from './components/Create';
 
 function App() {
     const {search, pathname}= useLocation();
@@ -18,6 +19,7 @@ function App() {
 
 
       <Routes>
+        <Route  path='/Create' element={<Create/>} />
         <Route path="/" element={<Home/>}/>
         <Route path='/Details/:id' element={<Details/>}/>
       </Routes>

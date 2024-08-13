@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ProductContext } from '../utils/Context';
 import { Loading } from './Loading';
 import axios from "../utils/axios";
+import Create from './Create';
 
 export const Home = () => {
   const [products] = useContext(ProductContext);
@@ -30,7 +31,7 @@ export const Home = () => {
     if (category != "undefined") getProductsCategory();
 
  },[category ,products]);
- console.log(category)
+
 
 
 
@@ -41,7 +42,7 @@ export const Home = () => {
       <div>
         <Nav />
         <div className="w-[80%] pt-10 mb-4 pl-4 h-screen ml-[20%] overflow-y-auto flex flex-wrap">
-          {filteredproducts && filteredproducts.map((p, i) => {
+          {filteredproducts && filteredproducts.map((p,i) => {
             return (
               <Link
                 key={i}
