@@ -7,14 +7,14 @@ export const Nav = () => {
   let dist_cat =
     products && products.reduce((acc, cv) => [...acc, cv.category], []);
   dist_cat = [...new Set(dist_cat)];
-  console.log(dist_cat);
+
 
   const color = () => {
     return `rgba(${(Math.random() * 255).toFixed()} , ${(
       Math.random() * 255
     ).toFixed()} ,${(Math.random() * 255).toFixed()} , 0.4)`;
   };
-console.log(color())
+  
   return (
     <nav className=" w-[20%] flex flex-col px-4 fixed item-center h-screen bg-zinc-300 ">
       <a
@@ -32,7 +32,10 @@ console.log(color())
             to={`/?category=${p}`}
             className="ml-10 mt-2 inline-block"
           >
-            <span style={{backgroundColor: color()}} className="w-3 h-3 rounded-full mr-2 inline-block"></span>
+            <span
+              style={{ backgroundColor: color() }}
+              className="w-3 h-3 rounded-full mr-2 inline-block"
+            ></span>
             {p}
           </Link>
         ))}

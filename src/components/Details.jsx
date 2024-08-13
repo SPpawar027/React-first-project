@@ -12,7 +12,7 @@ const {id}= useParams();
  const getSingleProducts =async ()=>{
       try {
         const {data} = await axiosInstance.get(`/products/${id}`);
-        setproducts(data);
+        setproducts(data)
         console.log(data)
       }
       catch (error) {
